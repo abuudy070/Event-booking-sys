@@ -10,6 +10,8 @@ import { adminOnly, protect } from "../middleware/auth.js";
 
 const eventRouter = express.Router();
 
+
+
 eventRouter.get("/", protect, getEvents);
 eventRouter.get("/:id", protect, getEventById);
 eventRouter.post("/", protect, adminOnly, createEvent);

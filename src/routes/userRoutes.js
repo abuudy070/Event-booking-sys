@@ -12,6 +12,8 @@ import { protect, superAdminOnly } from "../middleware/auth.js";
 
 const userRouter = express.Router();
 
+
+
 userRouter.post("/register", register);
 userRouter.post("/login", login);
 userRouter.post("/logout", logout);

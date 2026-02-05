@@ -10,6 +10,8 @@ import { protect, superAdminOnly } from "../middleware/auth.js";
 
 const bookingRouter = express.Router();
 
+
+
 bookingRouter.post("/", protect, createBooking);
 bookingRouter.get("/", protect, getBookings);
 bookingRouter.patch("/:id/approve", protect, superAdminOnly, approveBooking);
